@@ -1,0 +1,15 @@
+﻿<h1>Products</h1>
+<a ui-sref="products.add" class="btn btn-default">Add Product</a>
+<table class="table products-table">
+    <tr>
+        <th>Name</th>
+        <th>Price</th>
+        <th class="delete-column"></th>
+    </tr>
+    <tr ng-repeat="product in vm.products">
+        <td><a ui-sref="products.edit({ id: product.id })">{{product.name}}</a></td>
+        <td>${{product.price}}</td>
+        <td><a ng-click="vm.deleteProduct(product.id)" class="btn btn-xs btn-danger">Delete</a></td>
+    </tr>
+</table>
+<div ui-view class="view-side-form"></div>

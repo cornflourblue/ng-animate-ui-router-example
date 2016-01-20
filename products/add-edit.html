@@ -1,0 +1,22 @@
+﻿<div class="side-form">
+    <div class="content">
+        <h1>{{vm.title}}</h1>
+        <div class="form-container">
+            <form method="post">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" class="form-control" ng-model="vm.product.name" required />
+                </div>
+                <div class="form-group">
+                    <label for="name">Price</label>
+                    <input type="text" id="price" class="form-control" ng-model="vm.product.price" required />
+                </div>
+                <div class="form-group">
+                    <a class="btn btn-default" ui-sref="products">Cancel</a>
+                    <button class="btn btn-primary" ng-click="vm.saveProduct()">Save</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="background"></div>
+</div>

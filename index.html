@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+<html ng-app="app">
+<head>
+    <title>ngAnimate (1.4.8) transition example with UI-Router</title>
+
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="app-content/app.less" rel="stylesheet/less" type="text/css" />
+</head>
+<body>
+    <!-- header -->
+    <header>
+        <ul class="nav nav-tabs">
+            <li ng-class="{active: currentState.match('^overview')}"><a ui-sref="overview">Overview</a></li>
+            <li ng-class="{active: currentState.match('^product')}"><a ui-sref="products">Products</a></li>
+        </ul>
+    </header>
+
+    <!-- main -->
+    <main ui-view></main>
+
+    <!-- footer -->
+    <footer>
+        <p>
+            <a href="http://jasonwatmore.com/post/2016/01/20/Angular-ngAnimate-Tutorial-with-UI-Router.aspx">Angular ngAnimate Tutorial with UI Router</a>
+        </p>
+        <p>
+            <a href="http://jasonwatmore.com">JasonWatmore.com</a>
+        </p>
+    </footer>
+
+    <!-- less.js -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/2.5.3/less.min.js"></script>
+
+    <!-- angular -->
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-animate.min.js"></script>
+
+    <!-- ui router -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.min.js"></script>
+
+    <!-- application scripts -->
+    <script src="app.js"></script>
+    <script src="app-services/product.service.js"></script>
+    <script src="overview/main.controller.js"></script>
+    <script src="products/main.controller.js"></script>
+    <script src="products/add-edit.controller.js"></script>
+</body>
+</html>
