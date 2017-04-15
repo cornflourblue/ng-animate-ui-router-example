@@ -25,7 +25,7 @@
             // save product
             ProductService.Save(vm.product);
 
-            // redirect to users view
+            // redirect to products view
             $state.go('products');
 
             // emit event so list controller can refresh
