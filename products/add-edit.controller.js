@@ -22,7 +22,6 @@
         }
 
         function saveProduct() {
-            console.log('vm.product', vm.product);
             // save product
             ProductService.Save(vm.product);
 
